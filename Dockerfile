@@ -5,7 +5,7 @@ ARG ROCKETMQ_VERSION=4.3.0
 ARG ROCKETMQ_HOME=/export/servers/rocketmq
 ARG BASE_URL=http://mirror.bit.edu.cn/apache/rocketmq
 
-RUN apk add --no-cache curl tar bash procps
+RUN apk add --no-cache curl bash
 RUN mkdir -p ${ROCKETMQ_HOME} \
   && curl -fsSL -o /tmp/rocketmq.zip ${BASE_URL}/${ROCKETMQ_VERSION}/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip \
   && unzip -o /tmp/rocketmq.zip -d ${ROCKETMQ_HOME} \
