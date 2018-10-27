@@ -12,6 +12,8 @@ RUN mkdir -p ${ROCKETMQ_HOME} \
   && mv ${ROCKETMQ_HOME}/rocketmq-all*/* ${ROCKETMQ_HOME} \
   && rm -rf ${ROCKETMQ_HOME}/rocketmq-all* \
   && rm -f /tmp/rocketmq.zip
+  
+VOLUME ${ROCKETMQ_HOME}/data
 
 WORKDIR ${ROCKETMQ_HOME}/bin
 
